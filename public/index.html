@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <img src="img/jb.avif">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html">Iniciar Sesion</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <link rel="stylesheet" href="clock.css">
+    </header>
+    <div style="height: 100vh; background-image: url(https://st.depositphotos.com/1005171/3214/i/450/depositphotos_32140517-stock-photo-laptop-with-color-application-icons.jpg); background-size: cover; background-position: center;" class="position-relative w-100">
+  <div class="position-absolute text-white d-flex flex-column align-items-start justify-content-center" style="top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0,0,0,.7);">
+    <div class="container">
+      <div class="col-md-6">
+        <span style="color: #bbb;" class="text-uppercase">JUAN BARRETO</span>
+        <!-- on small screens remove display-4 -->
+        <h1 class="mb-4 mt-2 display-4 font-weight-bold">JB <span style="color: #0872ec;">Para Su Negocio</span></h1>
+        <p  style="color: #bbb;">Ideal para ti</p>
+        <div class="mt-5">
+          <!-- hover background-color: white; color: black; -->
+          <a href="contacto.html" class="btn px-5 py-3 text-white mt-3 mt-sm-0" style="border-radius: 30px; background-color: #4f80b0;">CONTACTENOS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <section class="categorias">
+        <div class="categoria">
+            <a href="url_de_diseno_web.html">
+                <div class="card">
+                    <h3>Diseño Web</h3>
+                </div>
+            </a>
+        </div>
+        <div class="categoria">
+            <a href="url_de_desarrollo_web.html">
+                <div class="card">
+                    <h3>Desarrollo Web</h3>
+                </div>
+            </a>
+        </div>
+        <div class="categoria">
+            <a href="url_de_desarrollo_apps.html">
+                <div class="card">
+                    <h3>Desarrollo de apps</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+    <div class="destacados-barra">
+        <p>Proyectos Destacados</p>
+    </div>
+    
+    <section class="galeria">
+        <div class="proyecto">
+            <img src="img/proyecto_1.jpg" alt="Proyecto 1">
+            <a href="proyecto-1.html">Proyecto 1</a>
+        </div>
+        <div class="proyecto">
+          <img src="img/proyecto_2.jpg" alt="Proyecto 3">
+          <a href="proyecto-3.html">Proyecto 2</a>
+        </div>
+        <div class="proyecto">
+          <img src="img/proyecto_3.jpg" alt="Proyecto 3">
+          <a href="proyecto-3.html">Proyecto 3</a>
+        </div>
+        <!-- Se pueden añadir más proyectos según sea necesario -->
+      </section>
+    <footer>
+        <p>Información adicional</p>
+        <time class="clock">
+            <span data-clock="time"></span>
+            <span data-clock="date"></span>
+          </time>
+    </footer>
+    <script src="clock.js"></script>
+   </body>
+</html>

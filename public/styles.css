@@ -1,0 +1,302 @@
+/* Estilos generales */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Estilos para el header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    background-color: #507ab8;
+    color: #fff;
+    padding: 50px 1;
+    display: flex;
+    align-items: center;
+    background-color: #507ab8;
+    color: #fff;
+    padding: 50px 1;
+    display: flex; /* Utilizamos flexbox para alinear los elementos */
+    align-items: center ; /* Alineamos verticalmente los elementos en el centro */
+}
+
+.logo {
+    float: left;
+    max-width: 100px; /* Establece un ancho máximo para el contenedor del logo */
+}
+
+.logo img {
+    max-width: 100%; /* Hace que la imagen del logo se ajuste al ancho máximo del contenedor */
+    height: auto;
+}
+
+
+/* Estilos para los botones */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centra los elementos del menú */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px; /* Ajusta el espacio alrededor del texto del botón */
+    border: 1px solid #fff; /* Añade un borde al botón */
+    border-radius: 5px; /* Añade bordes redondeados al botón */
+    transition: background-color 0.3s ease; /* Añade una transición suave al color de fondo */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Cambia el color de fondo al pasar el ratón por encima */
+}
+
+/* Alinea los botones horizontalmente */
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos específicos para las secciones */
+/* Estilos para la sección Hero */
+.hero {
+    background-color: #505869; /* Color de fondo */
+    background-image: url('img/fondo1.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir toda la sección */
+    background-position: center; /* Centra la imagen de fondo */
+    color: #fff; /* Color del texto */
+    padding: 100px 0; /* Espaciado interno */
+    text-align: center; /* Alinea el contenido al centro */
+}
+
+/* Estilos para el contenido dentro de la sección Hero */
+.hero-content {
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo con transparencia para sombreado */
+    padding: 20px; /* Espaciado interno del contenido */
+    border-radius: 10px; /* Bordes redondeados para el contenido */
+}
+
+/* Estilos para el título H1 */
+.hero-content h1 {
+    font-size: 2.5em; /* Tamaño de fuente del título */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos para el párrafo */
+.hero-content p {
+    font-size: 1.2em; /* Tamaño de fuente del párrafo */
+    line-height: 1.5; /* Altura de línea */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos para el botón de llamada a la acción */
+.hero-content .cta-button {
+    display: inline-block; /* Hace que el botón sea un elemento en línea */
+    background-color: #fff; /* Color de fondo del botón */
+    color: #4d64a1; /* Color de texto del botón */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón por encima */
+}
+
+/* Cambia el color de fondo del botón al pasar el ratón por encima */
+.hero-content .cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Cambia el color de fondo con transparencia */
+}
+
+/* Estilos para la sección de categorías */
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las categorías */
+}
+
+.categoria {
+  flex: 0 0 calc(25% - 20px); /* Establece el ancho de cada categoría */
+  max-width: calc(25% - 20px);
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #fff; /* Color de fondo de las tarjetas */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease; /* Agrega una transición suave al pasar el ratón por encima */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el ratón por encima */
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem; /* Tamaño de fuente del título */
+  color: #333; /* Color del texto del título */
+}
+
+.card p {
+  font-size: 1rem; /* Tamaño de fuente del párrafo */
+  color: #666; /* Color del texto del párrafo */
+}
+
+.card a {
+  text-decoration: none;
+  color: #333; /* Color del texto del enlace */
+}
+
+/* Media query para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+  .categoria {
+    flex-basis: calc(50% - 20px); /* Reducir el ancho de las categorías a la mitad en pantallas pequeñas */
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Estilos para la barra de proyectos destacados */
+.destacados-barra {
+    background-color: #f2f2f2; /* Color de fondo gris */
+    width: 100%; /* Ancho completo */
+    padding: 10px 0; /* Espaciado interno */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+.destacados-barra p {
+    margin: 0; /* Elimina el margen del párrafo dentro de la barra */
+    font-weight: bold; /* Texto en negrita */
+    color: #333; /* Color del texto */
+}
+
+
+/* Galería de Imágenes */
+
+.proyecto img {
+    width: 50%;
+    height: 10px; /* Tamaño fijo para todas las imágenes */
+    object-fit: cover; /* Recorte para mantener la proporción de aspecto */
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+.proyecto img:hover {
+    transform: scale(1.1); /* Escala la imagen al pasar el mouse */
+}
+
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Utiliza un mínimo de 250px por columna y ajusta automáticamente el número de columnas */
+  gap: 20px; /* Espacio entre las imágenes */
+  padding: 20px; /* Espaciado interior de la galería */
+}
+
+.proyecto {
+  text-align: center; /* Centra el contenido */
+}
+
+.proyecto img {
+  width: 100%; /* Las imágenes ocupan todo el ancho disponible */
+  max-width: 100%; /* Evita que las imágenes se agranden más allá de su tamaño natural */
+  height: auto; /* Mantiene la proporción de aspecto */
+  border-radius: 10px; /* Agrega bordes redondeados */
+}
+
+.proyecto a {
+  display: block; /* Convierte el enlace en un bloque para que ocupe todo el ancho de la imagen */
+  margin-top: 10px; /* Espacio entre la imagen y el enlace */
+  font-size: 1.1rem; /* Tamaño de fuente del enlace */
+  color: #333; /* Color del texto del enlace */
+  text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+/* Media query para dispositivos pequeños */
+@media screen and (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Reduce el tamaño mínimo de las columnas */
+    gap: 10px; /* Reduce el espacio entre las imágenes */
+    padding: 10px; /* Reduce el espaciado interior de la galería */
+  }
+
+  .proyecto img {
+    border-radius: 5px; /* Reduzca el radio del borde en dispositivos pequeños */
+  }
+
+  .proyecto a {
+    margin-top: 5px; /* Reduzca el espacio entre la imagen y el enlace */
+    font-size: 1rem; /* Reduzca el tamaño de fuente del enlace */
+  }
+}
+
+/* Formato para la pagina de registro*/
+.registration-form, .contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+.registration-form h2, .contact-form h2 {
+    text-align: center;
+}
+
+.registration-form label, .contact-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.registration-form button, .contact-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registration-form button:hover, .contact-form button:hover {
+    background-color: #555;
+}

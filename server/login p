@@ -1,0 +1,48 @@
+<?php
+session_start();
+
+// Conexión a la base de datos (cambia estos datos según tu configuración)
+$servername = "localhost";
+$username = "tu_usuario";
+$password = "tu_contraseña";
+$dbname = "mydatabase";
+
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Recibir datos del formulario
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+// Consultar usuario en la base de datos
+$sql = "SELECT * FROM usuarios WHERE username='$username'";
+$result = $conn->query($sql);
+
+if ($result->num_rows == 1) {
+    $row = $result->fetch_assoc();
+    if (password_verify($password, $row['password'])) {
+        // Iniciar sesión
+        $_SESSION['username'] = $username;
+        $_SESSION['tipo'] = $row['tipo'];
+        
+        // Redirigir según el tipo de usuario
+        if ($row['tipo'] == 'cliente') {
+            header("Location: cliente.php");
+        } elseif ($row['tipo'] == 'administrador') {
+            header("Location: admin.php");
+        }
+    } else {
+        echo "Contraseña incorrecta.";
+    }
+} else {
+    echo "Nombre de usuario incorrecto.";
+}
+
+// Cerrar conexión
+$conn->close();
+?>

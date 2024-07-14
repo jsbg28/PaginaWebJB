@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/jb.avif">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Registro</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="registration-form">
+        <h2>Registro de Usuarios</h2>
+        <form action="registrar_usuario.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" required>
+            <label for="tipo">Tipo de Usuario:</label><br>
+        <select id="tipo" name="tipo">
+            <option value="cliente">Cliente</option>
+            <option value="administrador">Administrador</option>
+        </select><br><br>
+            <button type="submit">Registrarse</button>
+        </form>
+    </section>
+    <footer>
+        <p>Información adicional</p>
+    </footer>
+</body>
+</html>
